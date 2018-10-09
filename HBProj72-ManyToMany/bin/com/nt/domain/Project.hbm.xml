@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.nt.domain">
+  <class name="Project" table="PROJECTS">
+       <id name="projid" >
+             <generator class="sequence">
+                  <param name="sequence_name">proj_seq</param>
+             </generator>
+        </id>
+       <property name="projname"/>
+       <property name="teamsize"/>
+      <set name="programmers"  table="PROGRAMMERS_PROJECTS" 
+               cascade="all"  lazy="extra" >
+          <key column="project_id"/>
+         <many-to-many  class="Programmer" column="programmer_id"/>
+     </set>
+</class>
+
+</hibernate-mapping>

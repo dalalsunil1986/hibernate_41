@@ -1,0 +1,22 @@
+SQL> desc Inh_Person2;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PID                                       NOT NULL NUMBER(10)
+ PNAME                                              VARCHAR2(15 CHAR)
+ COMPANY                                            VARCHAR2(15 CHAR)
+ 
+ SQL> desc Inh_Customer2;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PERSON_ID                                 NOT NULL NUMBER(10)
+ ADDRESS                                            VARCHAR2(10 CHAR)
+ BILLAMT                                            FLOAT(126)
+ 
+ SQL> desc Inh_Employee2;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PERSON_ID                                 NOT NULL NUMBER(10)
+ DESG                                               VARCHAR2(10 CHAR)
+ SALARY                                             NUMBER(10)
+ 
+ 

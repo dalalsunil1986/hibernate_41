@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="com.nt.domain.Florist" table="FLORIST">
+     <id name="flowerId">
+       <generator class="increment"/>
+     </id>
+     <property name="flowerName"/>
+     <property name="qtry" column="QUANITY"/>
+     <property name="price"/>
+     <property name="status"/>
+   </class>
+
+
+</hibernate-mapping>        

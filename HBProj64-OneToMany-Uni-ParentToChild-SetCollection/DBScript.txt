@@ -1,0 +1,12 @@
+SQL> create table user_details(userId number(7) primary key,
+                               firstName varchar2(15),
+                               address varchar(15));
+
+Table created.
+
+SQL> create table Phone_numbers(phone number(11) primary key,
+                                number_type varchar2(10),
+                                provider varchar2(10),
+                                unid number(7) references user_details(userId));
+
+Table created.

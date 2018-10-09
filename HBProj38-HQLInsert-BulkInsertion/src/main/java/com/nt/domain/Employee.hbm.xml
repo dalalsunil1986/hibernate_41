@@ -1,0 +1,45 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.nt.domain">
+   <class name="com.nt.domain.Employee" table="EMPLOYEE">
+     <id name="eid" column="EID" type="int" length="7"  /> 
+     <property name="firstName"  column="FIRSTNAME" not-null="true" type="string" length="18"/>
+     <property name="lastName"  column="LASTNAME" type="string"  length="18"/>
+     <property name="email"  column="EMAIL" type="string" unique="true" length="20"/>
+     <property name="salary"  column="SALARY" type="float" precision="2" length="10"/>
+  </class>
+  
+  
+  
+  <!--  <class name="Employee"  dynamic-insert="true" >
+     <id name="eid" >
+        <generator class="increment"/>
+     </id>
+     <property name="firstName"/>
+     <property name="lastName" />
+     <property name="email"/>
+     <property name="salary"/>
+  </class> -->
+  
+ <!--  <class name="com.nt.domain.Employee" table="Employee">
+     <id name="eid" type="int">
+       <column name="EID" length="7" />
+     </id>
+     <property name="firstName" type="string">
+        <column name="FIRSTNAME" length="19" />
+     </property>
+      <property name="lastName" type="string">
+        <column name="LASTNAME" length="19" />
+     </property>
+     <property name="email" type="string">
+        <column name="EMAIL" length="19" unique="true" />
+     </property>
+     <property name="salary" type="float">
+        <column name="SALARY" length="19" />
+     </property>
+  </class>-->
+  
+  
+</hibernate-mapping>        
+        

@@ -1,0 +1,21 @@
+SQL> desc programmers;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PID                                       NOT NULL NUMBER(5)
+ PNAME                                              VARCHAR2(20)
+ SALARY                                             NUMBER(10)
+
+SQL> desc projects;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROJID                                    NOT NULL NUMBER(5)
+ PROJNAME                                           VARCHAR2(20)
+ TEAMSIZE                                           NUMBER(3)
+
+SQL> desc programmers_projects;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PROGRAMMER_ID                             NOT NULL NUMBER(5)
+ PROJECT_ID                                NOT NULL NUMBER(5)
+ 
+ SQL> create sequence proj_seq1 start with 10001 increment by 1;

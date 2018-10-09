@@ -1,0 +1,11 @@
+SQL> desc inh_person1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PID                                       NOT NULL NUMBER(5)
+ PNAME                                              VARCHAR2(20)
+ COMPANY                                            VARCHAR2(20)
+ DESG                                               VARCHAR2(20)
+ SALARY                                             NUMBER(5)
+ ADDRESS                                            VARCHAR2(20)
+ BILLAMT                                            NUMBER(10,2)
+ PERSON_TYPE                                        VARCHAR2(10

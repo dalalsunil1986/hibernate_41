@@ -1,0 +1,45 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!-- <class name="com.nt.domain.Person" table="INH_PERSON3"> <id name="pid" 
+		length="10" type="int"> <generator class="increment" /> </id> <property name="pname" 
+		length="15" type="string" /> <property name="company" length="15" type="string" 
+		/> <union-subclass name="com.nt.domain.Employee" table="INH_EMPLOYEE3"> <property 
+		name="desg" length="10" type="string" /> <property name="salary" length="5" 
+		type="int" /> </union-subclass> <union-subclass name="com.nt.domain.Customer" 
+		table="INH_CUSTOMER3"> <property name="address" length="10" type="string" 
+		/> <property name="billAmt" length="10" precision="2" type="float" /> </union-subclass> 
+		</class> -->
+
+	<class name="com.nt.domain.Person" table="INH_PERSON3">
+		<id name="pid" length="10" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="pname" length="15" type="string" />
+		<property name="company" length="15" type="string" />
+	</class>
+	
+	<class name="com.nt.domain.Employee" table="INH_EMPLOYEE3">
+		<id name="pid" length="10" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="pname" length="15" type="string" />
+		<property name="company" length="15" type="string" />
+
+		<property name="desg" length="10" type="string" />
+		<property name="salary" length="5" type="int" />
+	</class>
+
+	<class name="com.nt.domain.Customer" table="INH_CUSTOMER3">
+	<id name="pid" length="10" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="pname" length="15" type="string" />
+		<property name="company" length="15" type="string" />
+
+		<property name="address" length="10" type="string" />
+		<property name="billAmt" length="10" precision="2" type="float" />
+	</class>
+</hibernate-mapping>

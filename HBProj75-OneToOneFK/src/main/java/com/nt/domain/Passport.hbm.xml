@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.nt.domain.Passport" table="PASSPORT">
+       <id name="psptNo" type="int" length="10" >
+         <generator class="sequence">
+            <param name="sequence_name">pspt_seq</param>
+         </generator>
+        </id>
+       <property name="psptType" type="string" length="10"/>
+       <property name="country" type="string" length="10"/>
+       <many-to-one name="psptHolder" 
+                    class="com.nt.domain.Person"
+                    column="pspt_holder"
+                    unique="true"
+                    not-null="true"
+                    cascade="all-delete-orphan" 
+                    lazy="proxy"/>
+</class>
+
+</hibernate-mapping>

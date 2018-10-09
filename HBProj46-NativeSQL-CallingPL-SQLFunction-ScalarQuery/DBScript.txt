@@ -1,0 +1,10 @@
+create or replace function 
+             FX_GET_VOTERSINFO_BY_MPDIV(mpDivLoc in Varchar2)return Sys_refcursor
+as
+  details SYS_REFCURSOR;
+ begin
+    open details for
+          SELECT VOTERID,VOTERNAME FROM VOTERINFO WHERE MPDIV=mpDivLoc;
+ return details;
+end;
+/

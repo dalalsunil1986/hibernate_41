@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+   <class name="com.nt.domain.BSEStock">
+     <id name="stockId"  type="int" length="10"  >
+        <generator class="increment"/>
+     </id>
+     <timestamp name="lastUpdated" source="vm"/>
+     <property name="stockName"   not-null="true" type="string" length="15"/>
+     <property name="price"   type="float"  length="10" precision="2"/>
+  </class>
+</hibernate-mapping>        
+        

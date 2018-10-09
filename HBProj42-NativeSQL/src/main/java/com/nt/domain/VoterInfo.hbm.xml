@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.nt.domain.VoterInfo" table="VOTERINFO">
+        <id name="voterId" type="int">
+            <column name="VOTERID" />
+            <generator class="increment" />
+        </id>
+        <property name="voterName" type="java.lang.String">
+            <column name="VOTERNAME" />
+        </property>
+        <property name="dob" type="java.util.Date">
+            <column name="DOB" />
+        </property>
+        <property name="mlaDiv" type="java.lang.String">
+            <column name="MLADIV" />
+        </property>
+        <property name="mpDiv" type="java.lang.String">
+            <column name="MPDIV" />
+        </property>
+    </class>
+</hibernate-mapping>

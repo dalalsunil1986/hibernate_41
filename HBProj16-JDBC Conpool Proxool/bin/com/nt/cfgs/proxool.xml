@@ -1,0 +1,14 @@
+<proxool>
+     <alias>pool1</alias>
+     <driver-url>jdbc:oracle:thin:@localhost:1521:xe</driver-url>
+     <driver-class>oracle.jdbc.driver.OracleDriver</driver-class>
+     <driver-properties>
+         <property name="user" value="system" />
+         <property name="password" value="manager" />
+     </driver-properties>
+     <house-keeping-sleep-time>40000</house-keeping-sleep-time>
+     <house-keeping-test-sql>select SYSDate from Dual</house-keeping-test-sql>
+     <maximum-connection-count>100</maximum-connection-count>
+     <minimum-connection-count>3</minimum-connection-count>
+     <maximum-connection-lifetime>18000000</maximum-connection-lifetime>
+</proxool>     

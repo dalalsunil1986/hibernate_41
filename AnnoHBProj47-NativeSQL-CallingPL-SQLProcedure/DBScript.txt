@@ -1,0 +1,8 @@
+create or replace procedure P_GET_VOTERS_INFO_BY_RANGE(details out SYS_REFCURSOR,
+                                                                                                 startId in number,endId in number)as
+begin
+    open details for
+        SELECT VOTERID,VOTERNAME,DOB,MLADIV,MPDIV FROM VOTERINFO
+                WHERE VOTERID>=startId AND VOTERID<=endId;
+end;
+/

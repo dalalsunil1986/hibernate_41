@@ -1,0 +1,14 @@
+SQL> create table Programmers(pid number(5) primary key,pname varchar2(20),salary number(10));
+
+Table created.
+
+SQL> create table Projects(projid number(5) primary key,projname varchar2(20),teamsize number(3));
+
+Table created.
+
+
+SQL> create table programmers_projects(programmer_id number(5) references Programmers(pid),project_id number(5) references projects(projid), primary key(programmer_id,project_id));
+
+Table created.
+
+SQL> create sequence proj_seq start with 100 increment by 1;

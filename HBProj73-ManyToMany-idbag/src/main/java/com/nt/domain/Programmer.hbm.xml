@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.nt.domain">
+  <class name="Programmer" table="PROGRAMMERS">
+       <id name="pid" >
+             <generator class="increment"/>
+        </id>
+       <property name="pname"/>
+       <property name="salary"/>
+      <set name="projects"  table="PROGRAMMERS_PROJECTS" 
+               cascade="all"  lazy="extra" inverse="true">
+          <key column="programmer_id"/>
+         <many-to-many  class="Project" column="project_id"/>
+     </set>
+</class>
+</hibernate-mapping>

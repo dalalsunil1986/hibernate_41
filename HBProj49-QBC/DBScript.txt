@@ -1,0 +1,1 @@
+ create table  Social_Ranking(sno number(5) primary key,aadharNO number(15),personName varchar2(20),address varchar2(15),socialRanking number(4));

@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="com.nt.domain.ProductSalesInfo">
+     <composite-id>
+       <key-property name="prodId" type="int" length="7"/>
+       <key-property name="custId" type="int" length="7"/>
+     </composite-id>
+     <property name="prodName" type="string" length="10"/>
+     <property name="custName" type="string" length="10"/>
+     <property name="price" type="float" precision="2" length="6"/>
+   </class>
+
+</hibernate-mapping>

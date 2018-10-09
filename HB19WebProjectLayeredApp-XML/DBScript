@@ -1,0 +1,1 @@
+SQL> create table Project(projId number(5) primary key,projName varchar2(20),teamSize number(10),period number(5));

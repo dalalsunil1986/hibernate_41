@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.nt.domain.VoterInfo" table="VOTERINFO">
+        <id name="voterId" type="int">
+            <column name="VOTERID" />
+            <generator class="increment" />
+        </id>
+        <property name="voterName" type="java.lang.String">
+            <column name="VOTERNAME" />
+        </property>
+        <property name="dob" type="java.util.Date">
+            <column name="DOB" />
+        </property>
+        <property name="mlaDiv" type="java.lang.String">
+            <column name="MLADIV" />
+        </property>
+        <property name="mpDiv" type="java.lang.String">
+            <column name="MPDIV" />
+        </property>
+    </class>
+   <sql-query name="GET_VOTERINFO_BY_MPDIVS">
+      <return class="com.nt.domain.VoterInfo"/>
+     <![CDATA[ SELECT * FROM VOTERINFO  WHERE MPDIV IN(:loc1,:loc2,:loc3) ]]>
+   </sql-query>
+   
+   <sql-query name="GET_VOTERINFO_COUNT">
+      <return-scalar column="count(*)" type="int"/>
+      SELECT COUNT(*) FROM VOTERINFO
+   </sql-query> 
+    
+   
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+   <class name="com.nt.domain.NGOMember" table="NGOMember">
+     <id name="mid" column="MID" type="int" length="7"  /> 
+     <property name="firstName"  column="FIRSTNAME" not-null="true" type="string" length="18"/>
+     <property name="lastName"  column="LASTNAME" type="string"  length="18"/>
+  </class>
+  
+  
+  
+  
+</hibernate-mapping>        
+        

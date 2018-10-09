@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+   <class name="com.nt.domain.MobileCustomer" table="MobileCustomer">
+     <id name="custId" column="CUSTID" type="int" length="7"  >
+        <generator class="increment"/>
+     </id>
+     <version name="ver" column="VER_COL" type="int"/>
+     
+     <property name="custName"  column="CUSTNAME" not-null="true" type="string" length="15"/>
+     <property name="phoneNumber"  column="PHONENUMBER" type="long"  length="11"/>
+     <property name="callerTune"  column="CALLERTUNE" type="string"  length="20"/>
+  </class>
+</hibernate-mapping>        
+        

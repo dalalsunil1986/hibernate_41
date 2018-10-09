@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+   <class name="com.nt.domain.TicketDetails" table="TICKETBOOKING">
+     <id name="aadharNo"  type="int" length="10"/>
+     <property name="ttktId" type="int" length="5"/>
+     <property name="matchName" type="string" length="15"/>
+     <property name="matchDate" type="date" />
+     <property name="price" type="int" />
+   </class>
+
+</hibernate-mapping>

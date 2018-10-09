@@ -1,0 +1,80 @@
+Understanding two Init() methods of Servlet API
+=========================================
+   There are two init() methods in servlet api
+
+       a)   public void init(ServletConfig cg)throws ServletException  
+                   (1st init() method (or) init(-) with parameter)
+              ->It is life cycle method of  Instatiation event
+              -> This method is orginally declared in javax.servlet.Servlet(I) and 
+                 implemented in GenericServlet(AC) and inheriteed to HttpServlet(AC)
+
+        b)  public void init() throws ServletException
+                    (2nd init() method (or) not a life cycle method )
+                ->It is convience method given to programmer
+                ->This direct method of  GenericServlet(AC) and inherited to
+                    HttpServlet(AC).
+
+ There are multiple approaches to place init() methods in servlet comp
+==========================================================
+GenericServlet.java (AC)
+ --------------------------
+public class GenericServlet implements Servlet{
+    private ServletConfig  config;
+
+  //1st init(-) method     (4)
+  public void init(ServletConfig config){
+       this.config=config;  //ServletConfig obj initialization
+        init(); (5)
+    }
+   //2nd init() method
+   public  void init(){
+       //null method
+        }
+  public  ServletConfig getServletConfig(){
+          return config;
+    }
+    .... //other methods
+    ....
+ }
+
+TestServlet.java (Our Servlet comp class)
+---------------------------------------------------------
+(1) (2) (3)
+public class TestServlet extends HttpServlet{
+
+  public void  init(){
+     //our initialization logic like creating jdbc connection
+      ...  (6)
+      ...
+    ServletConfig cg=getServletConfig();
+   }
+
+ (6)
+  public void service(ServletRequest req,ServletResponse res)throws SE,IOE{
+     ..
+    ...
+  ServletConfig cg=getServletConfig();
+   }
+ }
+
+  super init(ServletConfig ) method. More ever 
+
+init() method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+                   

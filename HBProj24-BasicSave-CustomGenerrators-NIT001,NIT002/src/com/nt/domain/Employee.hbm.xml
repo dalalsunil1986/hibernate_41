@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.nt.domain">
+   <class name="com.nt.domain.Employee" table="EMPLOYEE2">
+         
+       <id name="eid"  column="EID" type="string" length="20">
+          <generator class="com.nt.generators.CustomNITGenerator"/>
+       </id> 
+     <property name="firstName"  column="FIRSTNAME" not-null="true" type="string" length="18"/>
+     <property name="lastName"  column="LASTNAME" type="string"  length="18"/>
+     <property name="email"  column="EMAIL" type="string"  length="20"/>
+     <property name="salary"  column="SALARY" type="float" precision="2" length="10"/>
+  </class>
+  
+  
+  
+</hibernate-mapping>        
+        

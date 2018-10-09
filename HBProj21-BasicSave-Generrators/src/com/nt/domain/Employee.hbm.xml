@@ -1,0 +1,116 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.nt.domain">
+   <class name="com.nt.domain.Employee" table="EMPLOYEE">
+    <!--  <id name="eid" column="EID" type="int" length="7"  >
+        <generator class="assigned"/>
+        <generator class="org.hibernate.id.Assigned"/>
+     </id>  -->
+     
+     <!--  <id name="eid" column="EID" type="int" length="7"  >
+        <generator class="increment"/>
+     </id> -->
+     
+      <!-- <id name="eid" column="EID" type="int" length="7"  >
+        <generator class="identity"/>
+     </id> -->
+     
+     <!--  <id name="eid" column="EID" type="int" length="7" >
+        <generator class="sequence"/>
+     </id> -->
+     
+      <!-- <id name="eid" column="EID" type="int" length="7" >
+        <generator class="sequence">
+           <param name="sequence_name">EID_SEQ</param>
+        </generator>
+     </id> -->
+     
+    <!--  <id name="eid"  column="EID"  type="int" length="7">
+        <generator class="hilo">
+           <param name="table">HI_TAB</param>
+           <param name="column">HI_COL</param>
+           <param name="max_lo">5</param>
+        </generator>
+     </id> -->
+     
+    <!--   <id name="eid"  column="EID"  type="int" length="7">
+        <generator class="hilo">
+           <param name="max_lo">5</param>
+        </generator>
+     </id> -->
+     
+      <!--  <id name="eid"  column="EID"  type="int" length="7">
+        <generator class="seqhilo">
+           <param name="sequence">HB_EID_SEQ</param>
+           <param name="max_lo">5</param>
+        </generator>
+     </id>
+      -->
+      
+    <!--   <id name="eid"  column="EID"  type="int" length="7">
+        <generator class="seqhilo">
+           <param name="max_lo">5</param>
+        </generator>
+     </id> -->
+     
+       <!-- <id name="eid"  column="EID" type="int" length="10">
+         <generator class="native"/>
+       </id>
+      -->
+      
+      <!-- <id name="eid"  column="EID" type="int" length="10">
+         <generator class="native">
+           <param name="sequence">HB_EID_SEQ</param>
+         </generator>
+       </id> -->
+       
+        <!-- <id name="eid"  column="EID" type="int" length="10">
+         <generator class="native"/>
+       </id> -->
+       
+       <id name="eid"  column="EID" type="int" length="10">
+         <generator class="select">
+            <param name="key">email</param>
+         </generator>
+       </id> 
+       
+      
+     
+     <property name="firstName"  column="FIRSTNAME" not-null="true" type="string" length="18"/>
+     <property name="lastName"  column="LASTNAME" type="string"  length="18"/>
+     <property name="email"  column="EMAIL" type="string"  length="20"/>
+     <property name="salary"  column="SALARY" type="float" precision="2" length="10"/>
+  </class>
+  
+  <!--  <class name="Employee"  dynamic-insert="true" >
+     <id name="eid" >
+        <generator class="increment"/>
+     </id>
+     <property name="firstName"/>
+     <property name="lastName" />
+     <property name="email"/>
+     <property name="salary"/>
+  </class> -->
+  
+ <!--  <class name="com.nt.domain.Employee" table="Employee">
+     <id name="eid" type="int">
+       <column name="EID" length="7" />
+     </id>
+     <property name="firstName" type="string">
+        <column name="FIRSTNAME" length="19" />
+     </property>
+      <property name="lastName" type="string">
+        <column name="LASTNAME" length="19" />
+     </property>
+     <property name="email" type="string">
+        <column name="EMAIL" length="19" unique="true" />
+     </property>
+     <property name="salary" type="float">
+        <column name="SALARY" length="19" />
+     </property>
+  </class>-->
+  
+  
+</hibernate-mapping>        
+        

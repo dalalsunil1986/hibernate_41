@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Apr 13, 2018 5:46:20 PM by Hibernate Tools 5.1.4.Final -->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+    <class  dynamic-update="false" mutable="true" name="com.nt.domain.IplMatchInfo"  table="IPL_MATCH_INFO">
+        <id name="matchid" type="int">
+            <column name="MATCHID" precision="5" scale="5"/>
+            <generator class="increment"/>
+        </id>
+        <timestamp name="matchDate" column="MATCHDATE"/>
+        <property  name="title"  type="string" unique="false">
+            <column length="20" name="TITLE"/>
+        </property>
+        <property  name="location"  type="string" unique="false">
+            <column length="20" name="LOCATION"/>
+        </property>
+        
+        <property  name="finalresult"  type="string" unique="false">
+            <column length="10" name="FINALRESULT"/>
+        </property>
+    </class>
+</hibernate-mapping>

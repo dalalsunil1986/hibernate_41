@@ -1,0 +1,5 @@
+SQL> create table student_tab(sno number(5) primary key,sname varchar2(20),sadd varchar2(20));
+
+Table created.
+
+SQL> create table LibraryMembership(lib number(5) primary key,doj date,membershipType varchar2(20));

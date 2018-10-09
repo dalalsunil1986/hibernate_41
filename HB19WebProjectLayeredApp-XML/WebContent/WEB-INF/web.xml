@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>HB18WebProjectLayeredApp</display-name>
+  <welcome-file-list>
+    <welcome-file>form.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>main</servlet-name>
+    <servlet-class>com.nt.controller.MainController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>main</servlet-name>
+     <url-pattern>/controller</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>com.nt.listeners.SessionClosingRequestListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.nt.listeners.SessionFactoryContextListener</listener-class>
+  </listener>
+  
+  
+</web-app>

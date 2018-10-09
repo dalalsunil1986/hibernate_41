@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.nt.domain.SocialRanking" table="Social_Ranking"  lazy="true">
+        <id name="sno" type="int">
+            <column name="SNO" />
+            <generator class="increment" />
+        </id>
+        <property name="aadharNo" type="long">
+            <column name="AADHARNO" />
+        </property>
+        <property name="personName" type="string">
+            <column name="PERSONNAME" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" />
+        </property>
+        <property name="socialRank" type="int">
+            <column name="SOCIALRANK" />
+        </property>
+    </class>
+</hibernate-mapping>

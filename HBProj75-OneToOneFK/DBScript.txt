@@ -1,0 +1,1 @@
+SQL> create sequence pspt_seq start with 100000 increment by 1;

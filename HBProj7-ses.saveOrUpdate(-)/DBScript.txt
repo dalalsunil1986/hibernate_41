@@ -1,0 +1,1 @@
+SQL> create table product (pid number(5) primary key,pname varchar2(20),price number(7,2) ,qty number(7,2));

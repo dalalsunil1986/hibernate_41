@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.nt.domain.Department" table="DEPARTMENT">
+    <id name="deptNo" type="int">
+       <generator class="increment"/>
+    </id>
+    <property name="deptName" length="15" type="string"/>
+    <property name="deptLoc" length="15" type="string"/>
+  </class>
+
+</hibernate-mapping>

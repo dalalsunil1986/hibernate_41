@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+<hibernate-mapping>
+   <class name="com.nt.domain.AccountInfo"  table="ACCOUNTINFO">
+     <id name="acno"  type="int" length="5"/>
+     <property  name="holder" column="HOLDERNAME" type="string" length="10" />
+     <property name="balance" type="float" length="10" precision="2"/>
+     <filter name="HB_INACTIVE_ACCOUNTS" condition="ACNO NOT IN(:acno1,:acno2,:acno3)"/>
+   </class>
+   <filter-def name="HB_INACTIVE_ACCOUNTS">
+     <filter-param name="acno1" type="int"/>
+     <filter-param name="acno2" type="int"/>
+     <filter-param name="acno3" type="int"/>
+   </filter-def>
+</hibernate-mapping>

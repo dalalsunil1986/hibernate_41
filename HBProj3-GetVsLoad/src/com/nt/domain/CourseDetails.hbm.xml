@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+   <class name="com.nt.domain.CourseDetails" table="COURSE_DETAILS" lazy="false" proxy="com.nt.domain.ICourseDetails">
+     <id name="courseId"  type="int" length="5"/>
+     <property name="courseName" type="string" length="15" unique="true" not-null="true"/>
+     <property name="duration" type="int" length="5"/>
+     <property name="faculty" type="string" length="10"/>
+     <property name="status" type="boolean" length="5"/>
+     <property name="fee" type="int" length="10"/>
+   </class>
+
+</hibernate-mapping>

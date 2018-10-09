@@ -1,0 +1,1 @@
+SQL> create sequence license_seq start with 10000 increment by 1;

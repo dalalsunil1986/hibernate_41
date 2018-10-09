@@ -1,0 +1,48 @@
+package com.nt.domain;
+
+import java.io.Serializable;
+
+public class InsurancePolicy implements Serializable {
+	private int policyId;
+	private String policyName;
+	private String company;
+	private int tenure;
+	private int premium;
+	
+	public InsurancePolicy() {
+		System.out.println("InsurancePolicy::0-param constructor");
+	}
+	
+	
+	public int getPolicyId() {
+		return policyId;
+	}
+	public void setPolicyId(int policyId) {
+		this.policyId = policyId;
+	}
+	public String getPolicyName() {
+		return policyName;
+	}
+	public void setPolicyName(String policyName) {
+		this.policyName = policyName;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public int getTenure() {
+		return tenure;
+	}
+	public void setTenure(int tenure) {
+		this.tenure = tenure;
+	}
+	public int getPremium() {
+		return premium;
+	}
+	public void setPremium(int premium) {
+		this.premium = premium;
+	}
+
+}

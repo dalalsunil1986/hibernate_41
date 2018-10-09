@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+compile group: 'org.hibernate', name: 'hibernate-core', version: '5.1.10.Final'
+// https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0
+compile group: 'org.hibernate', name: 'hibernate-c3p0', version: '5.1.10.Final'
+// https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+// https://mvnrepository.com/artifact/javax.servlet/jstl
+compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+// https://mvnrepository.com/artifact/taglibs/standard
+compile group: 'taglibs', name: 'standard', version: '1.1.2'
+
+compile files('D:/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar')
+}
+
+mainClassName='com.nt.test.ManyToOneTest'
+
